@@ -1,0 +1,20 @@
+2025-12-07 03:04:33 | system | REGISTER | john registered
+2025-12-07 03:04:42 | john | LOGIN | john logged in
+2025-12-07 03:05:03 | system | AUTO_BACKUP | Database backed up to /storage/emulated/0/BookKeep/backups/backup_20251207_030503.db
+2025-12-07 03:05:18 |  | LOGOUT |  logged out
+2025-12-07 03:05:20 | john | LOGIN | john logged in
+2025-12-07 03:16:03 | john | LOGIN | john logged in
+2025-12-07 03:16:43 |  | LOGOUT |  logged out
+2025-12-07 03:18:34 | john | LOGIN | john logged in
+2025-12-07 03:21:42 | john | SALE | tables: qty=15, sell=1000.0, profit=1500.0
+2025-12-07 03:32:06 | john | LOGIN | john logged in
+2025-12-07 03:33:12 | john | LOGIN | john logged in
+2025-12-07 03:45:09 | john | LOGIN | john logged in
+2025-12-07 03:48:16 |  | LOGOUT |  logged out
+2025-12-07 03:49:10 | john | LOGIN | john logged in
+2025-12-07 03:49:42 | john | SALE | tables: qty=41, sell=1170.0, profit=11070.0
+2025-12-07 03:50:38 |  | LOGOUT |  logged out
+2025-12-07 04:02:50 | john | LOGIN | john logged in
+2025-12-07 04:04:46 |  | LOGOUT |  logged out
+2025-12-07 04:07:43 | john | LOGIN | john logged in
+2025-12-08 02:58:18 | john | LOGIN | john logged in

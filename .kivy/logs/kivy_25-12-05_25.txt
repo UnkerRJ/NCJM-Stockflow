@@ -1,0 +1,49 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/NCJM Sflow/.kivy/logs/kivy_25-12-05_25.txt
+[INFO   ] Kivy: v2.3.1
+[INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.13.2 (main, Apr 27 2025, 04:34:27) [GCC 11.4.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 195 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2 (img_pil, img_ffpyplayer ignored)
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/NCJM Sflow/main.py", line 350, in <module>
+[WARNING] stderr:     BookKeepApp().run()
+[WARNING] stderr:     ~~~~~~~~~~~~~~~~~^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/app.py", line 955, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:     ~~~~~~~~~~~~~~~~~^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/app.py", line 925, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:   File "/storage/emulated/0/NCJM Sflow/main.py", line 342, in build
+[WARNING] stderr:     return Builder.load_file("main.kv")
+[WARNING] stderr:            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/builder.py", line 310, in load_file
+[WARNING] stderr:     return self.load_string(data, **kwargs)
+[WARNING] stderr:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/builder.py", line 377, in load_string
+[WARNING] stderr:     parser = Parser(content=string, filename=fn)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/parser.py", line 483, in __init__
+[WARNING] stderr:     self.parse(content)
+[WARNING] stderr:     ~~~~~~~~~~^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/parser.py", line 593, in parse
+[WARNING] stderr:     objects, remaining_lines = self.parse_level(0, lines)
+[WARNING] stderr:                                ~~~~~~~~~~~~~~~~^^^^^^^^^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/parser.py", line 675, in parse_level
+[WARNING] stderr:     current_object = ParserRule(self, ln, name, rlevel)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/parser.py", line 335, in __init__
+[WARNING] stderr:     self._detect_selectors()
+[WARNING] stderr:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.13/site-packages/kivy/lang/parser.py", line 382, in _detect_selectors
+[WARNING] stderr:     raise ParserException(
+[WARNING] stderr:         self.ctx, self.line,
+[WARNING] stderr:         'Only one root object is allowed by .kv')
+[WARNING] stderr: kivy.lang.parser.ParserException: Parser: File "/storage/emulated/0/NCJM Sflow/main.kv", line 2:
+[WARNING] stderr: ...
+[WARNING] stderr:       1:from kivy.app import App
+[WARNING] stderr: >>    2:from kivy.lang import Builder
+[WARNING] stderr:       3:from kivy.uix.screenmanager import ScreenManager, Screen
+[WARNING] stderr:       4:from kivy.properties import StringProperty, ListProperty
+[WARNING] stderr: ...
+[WARNING] stderr: Only one root object is allowed by .kv

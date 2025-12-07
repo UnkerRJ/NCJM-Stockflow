@@ -1,0 +1,1614 @@
+#:kivy 2.3.0
+
+# ========== PROFESSIONAL MATERIAL DESIGN 3 BUTTONS ==========
+
+<MaterialButton@Button>:
+    size_hint_y: None
+    height: dp(48)
+    font_size: sp(15)
+    bold: True
+    background_normal: ""
+    background_down: ""
+    background_color: (0.15, 0.52, 1, 1) if self.state == "normal" else (0.12, 0.42, 0.85, 1)
+    color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.15 if self.state == "normal" else 0
+        RoundedRectangle:
+            pos: self.x, self.y - dp(2)
+            size: self.width, self.height
+            radius: [dp(12)]
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12)]
+
+<FilledButton@Button>:
+    size_hint_y: None
+    height: dp(48)
+    font_size: sp(15)
+    bold: True
+    background_normal: ""
+    background_down: ""
+    background_color: (0.15, 0.52, 1, 1) if self.state == "normal" else (0.12, 0.42, 0.85, 1)
+    color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(100)]
+
+<OutlinedButton@Button>:
+    size_hint_y: None
+    height: dp(48)
+    font_size: sp(15)
+    bold: False
+    background_normal: ""
+    background_down: ""
+    background_color: (0.08, 0.08, 0.10, 0.3) if self.state == "down" else (0, 0, 0, 0)
+    color: (0.15, 0.52, 1, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12)]
+        Color:
+            rgba: 0.15, 0.52, 1, 1
+        Line:
+            rounded_rectangle: self.x, self.y, self.width, self.height, dp(12)
+            width: dp(2)
+
+<TextButton@Button>:
+    size_hint_y: None
+    height: dp(44)
+    font_size: sp(14)
+    bold: False
+    background_normal: ""
+    background_down: ""
+    background_color: (0.08, 0.08, 0.10, 0.2) if self.state == "down" else (0, 0, 0, 0)
+    color: (0.15, 0.52, 1, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12)]
+
+<TonalButton@Button>:
+    size_hint_y: None
+    height: dp(48)
+    font_size: sp(15)
+    bold: False
+    background_normal: ""
+    background_down: ""
+    background_color: (0.15, 0.52, 1, 0.15) if self.state == "normal" else (0.15, 0.52, 1, 0.25)
+    color: (0.12, 0.42, 0.85, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12)]
+
+<DangerButton@Button>:
+    size_hint_y: None
+    height: dp(48)
+    font_size: sp(15)
+    bold: True
+    background_normal: ""
+    background_down: ""
+    background_color: (0.90, 0.15, 0.20, 1) if self.state == "normal" else (0.75, 0.10, 0.15, 1)
+    color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12)]
+
+<SuccessButton@Button>:
+    size_hint_y: None
+    height: dp(48)
+    font_size: sp(15)
+    bold: True
+    background_normal: ""
+    background_down: ""
+    background_color: (0.13, 0.70, 0.35, 1) if self.state == "normal" else (0.10, 0.60, 0.28, 1)
+    color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(12)]
+
+<IconButton@Button>:
+    size_hint: None, None
+    size: dp(48), dp(48)
+    font_size: sp(20)
+    background_normal: ""
+    background_down: ""
+    background_color: (0.08, 0.08, 0.10, 0.15) if self.state == "down" else (0, 0, 0, 0)
+    color: (0.9, 0.9, 0.9, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<FAB@Button>:
+    size_hint: None, None
+    size: dp(56), dp(56)
+    font_size: sp(24)
+    background_normal: ""
+    background_down: ""
+    background_color: (0.15, 0.52, 1, 1) if self.state == "normal" else (0.12, 0.42, 0.85, 1)
+    color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.25 if self.state == "normal" else 0.15
+        Ellipse:
+            pos: self.x, self.y - dp(3)
+            size: self.width, self.height
+        Color:
+            rgba: self.background_color
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<ChipButton@Button>:
+    size_hint_y: None
+    height: dp(36)
+    font_size: sp(13)
+    background_normal: ""
+    background_down: ""
+    background_color: (0.20, 0.20, 0.24, 1) if self.state == "normal" else (0.25, 0.25, 0.29, 1)
+    color: (0.9, 0.9, 0.9, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(18)]
+
+<NavButton@Button>:
+    size_hint_y: None
+    height: dp(52)
+    font_size: sp(14)
+    padding: dp(12), dp(8)
+    text_size: self.size
+    halign: "left"
+    valign: "middle"
+    background_normal: ""
+    background_down: ""
+    background_color: (0.15, 0.52, 1, 0.15) if self.state == "down" else (0, 0, 0, 0)
+    color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(10)]
+
+<CardButton@Button>:
+    size_hint_y: None
+    height: dp(100)
+    background_normal: ""
+    background_down: ""
+    background_color: (0.12, 0.12, 0.15, 1) if self.state == "normal" else (0.15, 0.15, 0.18, 1)
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.20 if self.state == "normal" else 0.10
+        RoundedRectangle:
+            pos: self.x, self.y - dp(2)
+            size: self.width, self.height
+            radius: [dp(16)]
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(16)]
+# ========== RESPONSIVE SIDEBAR WITH ICONS ==========
+
+<Sidebar@BoxLayout>:
+    id: sidebar
+    orientation: "vertical"
+    size_hint_x: None
+    width: dp(160) if root.width > dp(600) else dp(140)
+    padding: dp(12), dp(10)
+    spacing: dp(10)
+    canvas.before:
+        Color:
+            rgba: 0.07, 0.07, 0.11, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(70)
+        spacing: dp(8)
+        padding: 0, dp(4), 0, 0
+        Image:
+            id: sidebar_icon
+            source: "icons/dashboard.png"
+            size_hint_x: None
+            width: dp(60)
+            allow_stretch: True
+            keep_ratio: True
+        Label:
+            text: "NCJM"
+            color: 1,1,1,1
+            font_size: sp(18)
+            bold: True
+            valign: "middle"
+            halign: "left"
+            text_size: self.size
+
+    Label:
+        id: admin_label
+        text: "Welcome!"
+        font_size: sp(12)
+        color: 0.85, 0.85, 0.9, 1
+        size_hint_y: None
+        height: dp(24)
+        halign: "center"
+        valign: "middle"
+        text_size: self.size
+
+    Widget:
+        size_hint_y: None
+        height: dp(10)
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/home.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Home"
+            background_normal: ""
+            background_color: 0,0,0,0
+            color: 1,1,1,1
+            font_size: sp(14)
+            halign: "left"
+            valign: "middle"
+            text_size: self.size
+            on_release: app.switch_screen("home")
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/dashboard.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Dashboard"
+            background_normal: ""
+            background_color: 0,0,0,0
+            color: 1,1,1,1
+            font_size: sp(14)
+            halign: "left"
+            valign: "middle"
+            text_size: self.size
+            on_release: app.switch_screen("dashboard")
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/Transaction.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Sales"
+            background_normal: ""
+            background_color: 0,0,0,0
+            color: 1,1,1,1
+            font_size: sp(14)
+            halign: "left"
+            valign: "middle"
+            text_size: self.size
+            on_release: app.switch_screen("transaction")
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/Inventory.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Inventory"
+            background_normal: ""
+            background_color: 0,0,0,0
+            color: 1,1,1,1
+            font_size: sp(14)
+            halign: "left"
+            valign: "middle"
+            text_size: self.size
+            on_release: app.switch_screen("inventory")
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/contacts.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Customers"
+            background_normal: ""
+            background_color: 0,0,0,0
+            color: 1,1,1,1
+            font_size: sp(14)
+            halign: "left"
+            valign: "middle"
+            text_size: self.size
+            on_release: app.switch_screen("customers")
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/admin.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Admin"
+            background_normal: ""
+            background_color: 0,0,0,0
+            color: 1,1,1,1
+            font_size: sp(14)
+            halign: "left"
+            valign: "middle"
+            text_size: self.size
+            on_release: app.switch_screen("admin")
+
+    Widget:
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(8)
+        Image:
+            source: "icons/logout.png"
+            size_hint_x: None
+            width: dp(40)
+            allow_stretch: True
+            keep_ratio: True
+        Button:
+            text: "Logout"
+            background_normal: ""
+            background_down: ""
+            background_color: (0.90, 0.15, 0.20, 1) if self.state=="normal" else (0.75, 0.10, 0.15, 1)
+            color: 1,1,1,1
+            font_size: sp(14)
+            on_release: app.logout_user()
+
+
+# ========== SCREEN MANAGER ==========
+
+ScreenManagement:
+    LoginScreen:
+        name: "login"
+    RegisterScreen:
+        name: "register"
+    HomeScreen:
+        name: "home"
+    DashboardScreen:
+        name: "dashboard"
+    CategoryScreen:
+        name: "category"
+    TransactionScreen:
+        name: "transaction"
+    InventoryScreen:
+        name: "inventory"
+    CustomersScreen:
+        name: "customers"
+    ContactsScreen:
+        name: "contacts"
+    AdminScreen:
+        name: "admin"
+    LoadingScreen:
+        name: "loading"
+
+# ========== LOGIN SCREEN ==========
+
+<LoginScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0.06, 0.12, 0.24, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 1, None
+            height: dp(110)
+            pos_hint: {"top": 1}
+            padding: dp(20), dp(15)
+            Label:
+                text: "NCJM Stockflow"
+                font_size: sp(26) if root.width > dp(400) else sp(22)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(38)
+            Label:
+                text: "Offline D-inventory"
+                font_size: sp(13)
+                color: 0.85,0.9,1,1
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: (0.88, None) if root.width < dp(500) else (0.75, None)
+            height: dp(280)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            spacing: dp(10)
+            padding: dp(18)
+            canvas.before:
+                Color:
+                    rgba: 1,1,1,1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [dp(14)]
+
+            Label:
+                text: "Log In"
+                font_size: sp(18)
+                color: 0.12,0.12,0.16,1
+                size_hint_y: None
+                height: dp(28)
+
+            BoxLayout:
+                orientation: "vertical"
+                spacing: dp(4)
+                size_hint_y: None
+                height: dp(62)
+                Label:
+                    text: "Username"
+                    font_size: sp(11)
+                    color: 0.25,0.25,0.3,1
+                    size_hint_y: None
+                    height: dp(18)
+                    halign: "left"
+                    text_size: self.size
+                TextInput:
+                    id: username
+                    hint_text: "Email or username"
+                    multiline: False
+                    foreground_color: 0,0,0,1
+                    background_color: 0.95,0.96,0.98,1
+                    cursor_color: 0,0,0,1
+                    padding: dp(12), dp(8)
+                    font_size: sp(14)
+                    size_hint_y: None
+                    height: dp(42)
+
+            BoxLayout:
+                orientation: "vertical"
+                spacing: dp(4)
+                size_hint_y: None
+                height: dp(62)
+                Label:
+                    text: "Password"
+                    font_size: sp(11)
+                    color: 0.25,0.25,0.3,1
+                    size_hint_y: None
+                    height: dp(18)
+                    halign: "left"
+                    text_size: self.size
+                TextInput:
+                    id: password
+                    hint_text: "Password"
+                    multiline: False
+                    password: True
+                    foreground_color: 0,0,0,1
+                    background_color: 0.95,0.96,0.98,1
+                    cursor_color: 0,0,0,1
+                    padding: dp(12), dp(8)
+                    font_size: sp(14)
+                    size_hint_y: None
+                    height: dp(42)
+
+            Widget:
+                size_hint_y: None
+                height: dp(6)
+
+            Button:
+                text: "Log In"
+                size_hint_y: None
+                height: dp(46)
+                font_size: sp(15)
+                background_normal: ""
+                background_down: ""
+                background_color: (0.11, 0.47, 0.98, 1) if self.state=="normal" else (0.08, 0.36, 0.78, 1)
+                color: 1,1,1,1
+                on_release: root.do_login(username.text, password.text)
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: None, None
+            width: dp(300)
+            height: dp(40)
+            pos_hint: {"center_x": 0.5, "y": 0.08}
+            spacing: dp(8)
+            Label:
+                text: "Create new admin?"
+                color: 1,1,1,1
+                font_size: sp(12)
+                size_hint_x: None
+                width: self.texture_size[0]
+            Button:
+                text: "Sign up"
+                background_normal: ""
+                background_color: 0,0,0,0
+                color: 0.82,0.93,1,1
+                font_size: sp(12)
+                size_hint_x: None
+                width: dp(80)
+                on_release: app.root.current = "register"
+
+# ========== REGISTER SCREEN ==========
+
+<RegisterScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0.06, 0.12, 0.24, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 1, None
+            height: dp(110)
+            pos_hint: {"top": 1}
+            padding: dp(20), dp(15)
+            Label:
+                text: "NCJM Stockflow"
+                font_size: sp(26) if root.width > dp(400) else sp(22)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(38)
+            Label:
+                text: "Create admin account"
+                font_size: sp(13)
+                color: 0.85,0.9,1,1
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: (0.88, None) if root.width < dp(500) else (0.75, None)
+            height: dp(310)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            spacing: dp(10)
+            padding: dp(18)
+            canvas.before:
+                Color:
+                    rgba: 1,1,1,1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [dp(14)]
+
+            Label:
+                text: "Sign Up"
+                font_size: sp(18)
+                color: 0.12,0.12,0.16,1
+                size_hint_y: None
+                height: dp(28)
+
+            BoxLayout:
+                orientation: "vertical"
+                spacing: dp(4)
+                size_hint_y: None
+                height: dp(62)
+                Label:
+                    text: "Username"
+                    font_size: sp(11)
+                    color: 0.25,0.25,0.3,1
+                    size_hint_y: None
+                    height: dp(18)
+                    halign: "left"
+                    text_size: self.size
+                TextInput:
+                    id: username
+                    hint_text: "Choose username"
+                    multiline: False
+                    foreground_color: 0,0,0,1
+                    background_color: 0.95,0.96,0.98,1
+                    cursor_color: 0,0,0,1
+                    padding: dp(12), dp(8)
+                    font_size: sp(14)
+                    size_hint_y: None
+                    height: dp(42)
+
+            BoxLayout:
+                orientation: "vertical"
+                spacing: dp(4)
+                size_hint_y: None
+                height: dp(62)
+                Label:
+                    text: "Password"
+                    font_size: sp(11)
+                    color: 0.25,0.25,0.3,1
+                    size_hint_y: None
+                    height: dp(18)
+                    halign: "left"
+                    text_size: self.size
+                TextInput:
+                    id: password
+                    hint_text: "At least 8 characters"
+                    multiline: False
+                    password: True
+                    foreground_color: 0,0,0,1
+                    background_color: 0.95,0.96,0.98,1
+                    cursor_color: 0,0,0,1
+                    padding: dp(12), dp(8)
+                    font_size: sp(14)
+                    size_hint_y: None
+                    height: dp(42)
+
+            Widget:
+                size_hint_y: None
+                height: dp(6)
+
+            Button:
+                text: "Create Account"
+                size_hint_y: None
+                height: dp(46)
+                font_size: sp(15)
+                background_normal: ""
+                background_down: ""
+                background_color: (0.11, 0.47, 0.98, 1) if self.state=="normal" else (0.08, 0.36, 0.78, 1)
+                color: 1,1,1,1
+                on_release: root.do_register(username.text, password.text)
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: None, None
+            width: dp(280)
+            height: dp(40)
+            pos_hint: {"center_x": 0.5, "y": 0.08}
+            spacing: dp(8)
+            Label:
+                text: "Already have account?"
+                color: 1,1,1,1
+                font_size: sp(12)
+                size_hint_x: None
+                width: self.texture_size[0]
+            Button:
+                text: "Log in"
+                background_normal: ""
+                background_color: 0,0,0,0
+                color: 0.82,0.93,1,1
+                font_size: sp(12)
+                size_hint_x: None
+                width: dp(70)
+                on_release: app.root.current = "login"
+
+# ========== HOME SCREEN ==========
+
+<HomeScreen>:
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before:
+            Color:
+                rgba: 0.03,0.03,0.05,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Sidebar:
+            id: sidebar
+
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(14), dp(12)
+            spacing: dp(12)
+
+            Label:
+                text: "🏠 Home / Purchase"
+                font_size: sp(19) if root.width > dp(400) else sp(17)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(32)
+                halign: "left"
+                text_size: self.size
+
+            TextInput:
+                id: search_bar
+                hint_text: "🔍 Search categories..."
+                multiline: False
+                size_hint_y: None
+                height: dp(44)
+                foreground_color: 1,1,1,1
+                background_color: 0.15,0.15,0.18,1
+                cursor_color: 1,1,1,1
+                padding: dp(12), dp(10)
+                font_size: sp(14)
+                on_text: root.filter_categories(self.text)
+
+            BoxLayout:
+                orientation: "vertical"
+                size_hint_y: None
+                height: dp(130) if root.height > dp(700) else dp(100)
+                spacing: dp(6)
+
+                Label:
+                    text: "⚠ Low Stock Alerts"
+                    font_size: sp(15)
+                    bold: True
+                    color: 1, 0.8, 0.2, 1
+                    size_hint_y: None
+                    height: dp(26)
+                    halign: "left"
+                    text_size: self.size
+
+                ScrollView:
+                    do_scroll_y: True
+                    do_scroll_x: False
+                    bar_width: dp(4)
+                    GridLayout:
+                        id: low_stock_grid
+                        cols: 1
+                        size_hint_y: None
+                        height: self.minimum_height
+                        spacing: dp(6)
+
+            MaterialButton:
+                text: "+ Add Category"
+                size_hint_y: None
+                height: dp(48)
+                on_release: root.add_category_popup()
+
+            ScrollView:
+                do_scroll_y: True
+                do_scroll_x: False
+                bar_width: dp(4)
+                GridLayout:
+                    id: category_grid
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(8)
+
+# ========== DASHBOARD SCREEN ==========
+
+<DashboardScreen>:
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before:
+            Color:
+                rgba: 0.03,0.03,0.05,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Sidebar:
+            id: sidebar
+
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(14), dp(12)
+            spacing: dp(14)
+
+            Label:
+                text: "📊 Dashboard"
+                font_size: sp(19)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(32)
+                halign: "left"
+                text_size: self.size
+
+            GridLayout:
+                cols: 2 if root.width > dp(500) else 1
+                size_hint_y: None
+                height: dp(200) if root.width > dp(500) else dp(400)
+                spacing: dp(12)
+                row_default_height: dp(90)
+                row_force_default: True
+
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(14)
+                    spacing: dp(8)
+                    canvas.before:
+                        Color:
+                            rgba: 0.15, 0.52, 1, 0.3
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [dp(12)]
+                    Label:
+                        text: "Today's Profit"
+                        font_size: sp(13)
+                        color: 0.9,0.9,0.9,1
+                        size_hint_y: None
+                        height: dp(22)
+                    Label:
+                        id: lbl_today_profit
+                        text: "₱0.00"
+                        font_size: sp(22)
+                        bold: True
+                        color: 0.5,0.9,0.5,1
+
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(14)
+                    spacing: dp(8)
+                    canvas.before:
+                        Color:
+                            rgba: 0.95, 0.60, 0.10, 0.3
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [dp(12)]
+                    Label:
+                        text: "This Week"
+                        font_size: sp(13)
+                        color: 0.9,0.9,0.9,1
+                        size_hint_y: None
+                        height: dp(22)
+                    Label:
+                        id: lbl_week_profit
+                        text: "₱0.00"
+                        font_size: sp(22)
+                        bold: True
+                        color: 1,0.8,0.2,1
+
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(14)
+                    spacing: dp(8)
+                    canvas.before:
+                        Color:
+                            rgba: 0.5, 0.2, 0.8, 0.3
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [dp(12)]
+                    Label:
+                        text: "This Month"
+                        font_size: sp(13)
+                        color: 0.9,0.9,0.9,1
+                        size_hint_y: None
+                        height: dp(22)
+                    Label:
+                        id: lbl_month_profit
+                        text: "₱0.00"
+                        font_size: sp(22)
+                        bold: True
+                        color: 0.8,0.6,1,1
+
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(14)
+                    spacing: dp(8)
+                    canvas.before:
+                        Color:
+                            rgba: 0.2, 0.7, 0.5, 0.3
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [dp(12)]
+                    Label:
+                        text: "Inventory Value"
+                        font_size: sp(13)
+                        color: 0.9,0.9,0.9,1
+                        size_hint_y: None
+                        height: dp(22)
+                    Label:
+                        id: lbl_inventory_value
+                        text: "₱0.00"
+                        font_size: sp(22)
+                        bold: True
+                        color: 0.5,0.9,0.7,1
+
+            BoxLayout:
+                id: chart_container
+                orientation: "vertical"
+                size_hint_y: 0.3
+
+            Label:
+                text: "🏆 Top 5 Best Sellers"
+                font_size: sp(16)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(28)
+                halign: "left"
+                text_size: self.size
+
+            ScrollView:
+                do_scroll_y: True
+                do_scroll_x: False
+                bar_width: dp(4)
+                GridLayout:
+                    id: best_sellers_grid
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(6)
+
+# ========== CATEGORY SCREEN ==========
+
+<CategoryScreen>:
+    Label:
+        text: "Category Screen (Unused)"
+        color: 1,1,1,1
+
+# ========== TRANSACTION SCREEN ==========
+
+<TransactionScreen>:
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before:
+            Color:
+                rgba: 0.03,0.03,0.05,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Sidebar:
+            id: sidebar
+
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(14), dp(12)
+            spacing: dp(12)
+
+            Label:
+                text: "💰 Sales / Transactions"
+                font_size: sp(19) if root.width > dp(400) else sp(17)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(32)
+                halign: "left"
+                text_size: self.size
+
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: dp(45)
+                spacing: dp(8)
+
+                Label:
+                    id: lbl_customer
+                    text: "👤 No customer selected"
+                    color: 1,1,1,1
+                    font_size: sp(13)
+                    size_hint_x: 0.7
+                    halign: "left"
+                    valign: "middle"
+                    text_size: self.size
+
+                TonalButton:
+                    text: "Select"
+                    size_hint_x: 0.3
+                    on_release: root.select_customer()
+
+            Label:
+                id: lbl_selected_item
+                text: "Select an item for sale"
+                color: 1,1,1,1
+                font_size: sp(14)
+                size_hint_y: None
+                height: dp(50)
+                halign: "left"
+                valign: "middle"
+                text_size: self.size
+
+            BoxLayout:
+                orientation: "vertical" if root.width < dp(450) else "horizontal"
+                size_hint_y: None
+                height: dp(150) if root.width < dp(450) else dp(80)
+                spacing: dp(10)
+
+                BoxLayout:
+                    orientation: "vertical"
+                    spacing: dp(4)
+                    Label:
+                        text: "Quantity"
+                        color: 0.8,0.8,0.8,1
+                        font_size: sp(13)
+                        size_hint_y: None
+                        height: dp(20)
+                        halign: "left"
+                        text_size: self.size
+                    TextInput:
+                        id: ti_qty
+                        input_filter: "int"
+                        multiline: False
+                        foreground_color: 1,1,1,1
+                        background_color: 0.18,0.18,0.22,1
+                        cursor_color: 1,1,1,1
+                        padding: dp(10), dp(8)
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+
+                BoxLayout:
+                    orientation: "vertical"
+                    spacing: dp(4)
+                    Label:
+                        text: "Sell Price"
+                        color: 0.8,0.8,0.8,1
+                        font_size: sp(13)
+                        size_hint_y: None
+                        height: dp(20)
+                        halign: "left"
+                        text_size: self.size
+                    TextInput:
+                        id: ti_sell_price
+                        input_filter: "float"
+                        multiline: False
+                        foreground_color: 1,1,1,1
+                        background_color: 0.18,0.18,0.22,1
+                        cursor_color: 1,1,1,1
+                        padding: dp(10), dp(8)
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: dp(45)
+                spacing: dp(8)
+
+                Label:
+                    text: "Payment:"
+                    size_hint_x: None
+                    width: dp(80)
+                    color: 0.8,0.8,0.8,1
+                    font_size: sp(13)
+
+                Spinner:
+                    id: payment_method
+                    text: "Cash"
+                    values: ["Cash", "Card", "Mobile Money", "Check"]
+                    size_hint_x: 0.6
+                    background_color: 0.18,0.18,0.22,1
+
+            SuccessButton:
+                text: "✓ Record Sale"
+                on_release: root.add_transaction(ti_qty.text, ti_sell_price.text)
+
+            Label:
+                text: "Recent Transactions"
+                size_hint_y: None
+                height: dp(26)
+                color: 1,1,1,1
+                font_size: sp(14)
+                bold: True
+                halign: "left"
+                text_size: self.size
+
+            ScrollView:
+                size_hint_y: 0.2
+                do_scroll_y: True
+                do_scroll_x: False
+                bar_width: dp(4)
+                GridLayout:
+                    id: recent_trans_grid
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(6)
+
+            Label:
+                text: "Select Item"
+                size_hint_y: None
+                height: dp(26)
+                color: 1,1,1,1
+                font_size: sp(14)
+                bold: True
+                halign: "left"
+                text_size: self.size
+
+            ScrollView:
+                do_scroll_y: True
+                do_scroll_x: False
+                bar_width: dp(4)
+                GridLayout:
+                    id: trans_category_grid
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(8)
+
+# ========== INVENTORY SCREEN ==========
+
+<InventoryScreen>:
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before:
+            Color:
+                rgba: 0.03,0.03,0.05,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Sidebar:
+            id: sidebar
+
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(14), dp(12)
+            spacing: dp(14)
+
+            Label:
+                text: "📦 Inventory Summary"
+                font_size: sp(18)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(30)
+                halign: "left"
+                text_size: self.size
+
+            BoxLayout:
+                id: filter_bar
+                orientation: "vertical"
+                size_hint_y: None
+                height: dp(110)
+                spacing: dp(8)
+
+                BoxLayout:
+                    orientation: "vertical" if root.width < dp(450) else "horizontal"
+                    size_hint_y: None
+                    height: dp(96) if root.width < dp(450) else dp(52)
+                    spacing: dp(8)
+
+                    Label:
+                        text: "Date:"
+                        size_hint_x: None if root.width >= dp(450) else 1
+                        width: dp(50) if root.width >= dp(450) else dp(0)
+                        size_hint_y: None
+                        height: dp(20) if root.width < dp(450) else dp(52)
+                        color: 0.9,0.9,0.9,1
+                        font_size: sp(14)
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+
+                    TextInput:
+                        id: ti_filter_date
+                        hint_text: "YYYY-MM-DD"
+                        multiline: False
+                        size_hint_x: 0.5 if root.width >= dp(450) else 1
+                        foreground_color: 1,1,1,1
+                        background_color: 0.18,0.18,0.22,1
+                        cursor_color: 1,1,1,1
+                        padding: dp(12), dp(10)
+                        font_size: sp(14)
+                        size_hint_y: None
+                        height: dp(48)
+
+                    MaterialButton:
+                        text: "Show"
+                        size_hint_x: None if root.width >= dp(450) else 1
+                        width: dp(100) if root.width >= dp(450) else dp(0)
+                        height: dp(48)
+                        on_release: root.load_daily_summary(ti_filter_date.text)
+
+                GridLayout:
+                    cols: 3
+                    size_hint_y: None
+                    height: dp(40)
+                    spacing: dp(8)
+
+                    Button:
+                        text: "Today"
+                        background_normal: ""
+                        background_color: 0.2,0.6,0.86,1
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                        on_release: root.quick_date(0)
+
+                    Button:
+                        text: "Yesterday"
+                        background_normal: ""
+                        background_color: 0.3,0.3,0.35,1
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                        on_release: root.quick_date(1)
+
+                    Button:
+                        text: "7 Days Ago"
+                        background_normal: ""
+                        background_color: 0.3,0.3,0.35,1
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                        on_release: root.quick_date(7)
+
+            Widget:
+                size_hint_y: None
+                height: dp(8)
+
+            Label:
+                text: "All-Time Inventory"
+                font_size: sp(14)
+                bold: True
+                color: 0.85,0.85,0.9,1
+                size_hint_y: None
+                height: dp(22)
+                halign: "left"
+                valign: "middle"
+                text_size: self.size
+
+            ScrollView:
+                size_hint: 1, 0.42
+                do_scroll_x: True
+                do_scroll_y: True
+                bar_width: dp(4)
+
+                GridLayout:
+                    id: inventory_table
+                    cols: 9
+                    size_hint_y: None
+                    height: self.minimum_height
+                    size_hint_x: None
+                    width: self.minimum_width
+                    row_default_height: dp(36)
+                    row_force_default: True
+                    spacing: dp(2)
+                    padding: dp(4)
+
+                    Label:
+                        text: "Item"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(110)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Bought"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(90)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Left"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(90)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Cost/u"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(80)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Cost Total"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(90)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Sold"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(70)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Sell/u"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(80)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Sales"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(100)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Profit(%)"
+                        bold: True
+                        size_hint_x: None
+                        width: dp(80)
+                        color: 1,1,1,1
+                        font_size: sp(12)
+
+            Widget:
+                size_hint_y: None
+                height: dp(10)
+
+            Label:
+                text: "Daily Sales Summary"
+                font_size: sp(15)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(24)
+                halign: "left"
+                text_size: self.size
+
+            ScrollView:
+                size_hint: 1, 0.24
+                do_scroll_y: True
+                do_scroll_x: False
+                bar_width: dp(4)
+
+                GridLayout:
+                    id: daily_table
+                    cols: 4
+                    size_hint_y: None
+                    height: self.minimum_height
+                    row_default_height: dp(32)
+                    row_force_default: True
+                    spacing: dp(2)
+                    padding: dp(4)
+
+                    Label:
+                        text: "Item"
+                        bold: True
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Qty"
+                        bold: True
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Sales"
+                        bold: True
+                        color: 1,1,1,1
+                        font_size: sp(12)
+                    Label:
+                        text: "Profit"
+                        bold: True
+                        color: 1,1,1,1
+                        font_size: sp(12)
+
+# ========== CUSTOMERS SCREEN ==========
+
+<CustomersScreen>:
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before:
+            Color:
+                rgba: 0.03,0.03,0.05,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Sidebar:
+            id: sidebar
+
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(14), dp(12)
+            spacing: dp(14)
+
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: dp(50)
+                spacing: dp(10)
+
+                Label:
+                    text: "👥 Customers"
+                    font_size: sp(19)
+                    bold: True
+                    color: 1,1,1,1
+                    halign: "left"
+                    valign: "middle"
+                    text_size: self.size
+
+                FAB:
+                    text: "+"
+                    on_release: root.add_customer_popup()
+
+            ScrollView:
+                do_scroll_y: True
+                do_scroll_x: False
+                bar_width: dp(4)
+
+                GridLayout:
+                    id: customers_grid
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(10)
+
+# ========== CONTACTS SCREEN (REDIRECT) ==========
+
+<ContactsScreen>:
+    Label:
+        text: "Redirecting to Customers..."
+        color: 1,1,1,1
+
+# ========== ADMIN SCREEN ==========
+
+<AdminScreen>:
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before:
+            Color:
+                rgba: 0.03,0.03,0.05,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Sidebar:
+            id: sidebar
+
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(14), dp(12)
+            spacing: dp(14)
+
+            Label:
+                text: "⚙ Admin Settings"
+                font_size: sp(19)
+                bold: True
+                color: 1,1,1,1
+                size_hint_y: None
+                height: dp(32)
+                halign: "left"
+                text_size: self.size
+
+            ScrollView:
+                GridLayout:
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(12)
+
+                    MaterialButton:
+                        text: "🔑 Change Password"
+                        on_release: root.change_password()
+
+                    MaterialButton:
+                        text: "💾 Backup Database"
+                        background_color: (0.13, 0.70, 0.35, 1)
+                        on_release: root.backup_database()
+
+                    MaterialButton:
+                        text: "📥 Export Data (CSV)"
+                        background_color: (0.2, 0.6, 0.86, 1)
+                        on_release: root.export_data()
+
+                    MaterialButton:
+                        text: "📋 View Audit Log"
+                        background_color: (0.5, 0.2, 0.8, 1)
+                        on_release: root.view_audit_log()
+
+                    BoxLayout:
+                        orientation: "vertical"
+                        size_hint_y: None
+                        height: dp(80)
+                        spacing: dp(8)
+                        padding: dp(12)
+                        canvas.before:
+                            Color:
+                                rgba: 0.12, 0.12, 0.15, 1
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                                radius: [dp(12)]
+
+                        Label:
+                            text: "🎨 Theme"
+                            size_hint_y: None
+                            height: dp(25)
+                            color: 1,1,1,1
+                            font_size: sp(14)
+                            halign: "left"
+                            text_size: self.size
+
+                        Spinner:
+                            id: theme_spinner
+                            text: "Dark"
+                            values: ["Dark", "Light"]
+                            size_hint_y: None
+                            height: dp(40)
+                            on_text: root.toggle_theme(self.text)
+
+                    Widget:
+                        size_hint_y: None
+                        height: dp(20)
+
+                    DangerButton:
+                        text: "🗑 Delete Admin Account"
+                        on_release: root.delete_account()
+
+# ========== LOADING SCREEN ==========
+
+<LoadingScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: dp(16)
+        padding: dp(20)
+        canvas.before:
+            Color:
+                rgba: 0.05,0.05,0.07,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Widget:
+
+        Label:
+            text: root.message
+            font_size: sp(16)
+            color: 1,1,1,1
+            size_hint_y: None
+            height: dp(40)
+            halign: "center"
+            valign: "middle"
+            text_size: self.size
+
+        ProgressBar:
+            id: loading_bar
+            max: 100
+            value: 0
+            size_hint: 0.8, None
+            height: dp(18)
+            pos_hint: {"center_x": 0.5}
+
+        Widget:
